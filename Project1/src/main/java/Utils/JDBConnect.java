@@ -30,9 +30,9 @@ public class JDBConnect {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");  // 1단계
 			System.out.println("JDBConnect 기본생성자 1단계 성공");
-			String url = "jdbc:oracle:thin:@jhj1395.synology.me:21521:xe";
-			String id = "PM";
-			String pw = "PMPMPM";
+			String url = System.getenv().getOrDefault("DB_URL", "jdbc:oracle:thin:@localhost:1521:xe"); // 접속 정보는 환경변수로 받는다
+			String id = System.getenv().getOrDefault("DB_USER", "YOUR_DB_USER");
+			String pw = System.getenv().getOrDefault("DB_PASSWORD", "YOUR_DB_PASSWORD");
 			con = DriverManager.getConnection(url, id, pw); // 2단계
 			System.out.println("JDBConnect 기본생성자 2단계 성공");
 		} catch (ClassNotFoundException | SQLException e) {

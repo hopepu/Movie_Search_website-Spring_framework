@@ -24,17 +24,17 @@
 
 	<context-param>
 		<param-name>OracleURL</param-name>
-		<param-value>jdbc:oracle:thin:@jhj1395.synology.me:21521:xe</param-value>
+		<param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>Oracle_id</param-name>
-		<param-value>PM</param-value>
+		<param-value>YOUR_DB_USER</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>Oracle_pwd</param-name>
-		<param-value>PMPMPM</param-value>
+		<param-value>YOUR_DB_PASSWORD</param-value>
 	</context-param>
 	
 	<!-- 페이징처리용 변수선언 -->
